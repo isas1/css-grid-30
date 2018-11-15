@@ -12,12 +12,18 @@
   <div class="container">
     <div class="item">1</div>
     <div class="item">2</div>
+    <div class="item">3</div>
+    
   </div>
 
   <style>
     .container {
       display: grid;
       grid-gap: 20px;
+      grid-template-columns: 250px auto; 
+      grid-template-rows: 175px; 
+      grid-auto-flow: column; /* Extra elements are added as columns*/
+      grid-auto-rows: 100px; /* Size of implicit columns */
     }
   </style>
 </body>
