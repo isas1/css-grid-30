@@ -97,6 +97,35 @@
 
 
   <style>
+    /* container */
+    .albums {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+    
+    /* item */
+    .album {
+      display: grid;
+      background-color: white;
+      padding: 15px;
+      margin: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-areas: 
+      "pic title"
+    }
+
+    .album__artwork {
+      display: grid;
+      grid-area: pic;
+      max-width: 200px;
+    }
+    .album__details {
+      display: grid;
+      grid-area: title;
+      min-width: 200px;
+    }
+
+
   </style>
 </body>
 
