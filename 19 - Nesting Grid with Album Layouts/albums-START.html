@@ -100,7 +100,7 @@
     /* container */
     .albums {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }
     
     /* item */
@@ -109,7 +109,7 @@
       background-color: white;
       padding: 15px;
       margin: 15px;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-columns: 1fr 1fr;
       grid-template-areas: 
       "pic title"
     }
