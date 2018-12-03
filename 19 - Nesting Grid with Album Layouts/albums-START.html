@@ -17,7 +17,6 @@
         <h2>Album Title</h2>
         <p class="album__artist">Artist Name</p>
         <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque repellat, iste debitis.</p>
-        <p class="album__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, excepturi!</p>
       </div>
     </div>
     <div class="album">
@@ -109,20 +108,23 @@
       background-color: white;
       padding: 15px;
       margin: 15px;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr minmax(100px, 200px);
       grid-template-areas: 
-      "pic title"
+      "pic details"
     }
 
     .album__artwork {
       display: grid;
       grid-area: pic;
-      max-width: 200px;
+      object-fit: cover;
     }
+
     .album__details {
       display: grid;
-      grid-area: title;
+      padding: 5px;
+      grid-area: details;
       min-width: 200px;
+      grid-template-rows: repeat(3, 1fr);
     }
 
 
